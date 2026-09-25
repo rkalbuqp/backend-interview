@@ -13,14 +13,7 @@ public static class DependencyInjection
         services.AddDbContext<AppDbContext>(options =>
             options.UseInMemoryDatabase("InventoryDb"));
 
-        // TODO (Candidato) - Bug #2 (análogo useContext / useProvider):
-        // Assim como no React, se você chamar useContext() mas NÃO envolveu a árvore
-        // com um <Provider value={...}>, o valor será undefined. Aqui no .NET, se você
-        // injetar IProductRepository no construtor mas NÃO registrou a implementação,
-        // o container DI lança: InvalidOperationException: Unable to resolve service for type 'IProductRepository'
-        //
-        // Descomente a linha abaixo para "registrar o Provider" desta dependência:
-        // services.AddScoped<IProductRepository, EfCoreProductRepository>();
+        // TODO (Candidato): registrar a implementacao de IProductRepository no container de DI.
 
         return services;
     }

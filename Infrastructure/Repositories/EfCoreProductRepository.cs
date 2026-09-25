@@ -28,12 +28,7 @@ public class EfCoreProductRepository : IProductRepository
     {
         _context.Products.Add(product);
 
-        // TODO (Candidato) - Bug #1 (análogo useState): 
-        // Assim como no React você PRECISA chamar setState para o novo valor refletir no componente,
-        // no EF Core você PRECISA chamar SaveChangesAsync() para persistir no banco e receber o Id gerado.
-        // Atualmente o Add só altera o ChangeTracker em memória, mas nada é salvo.
-        // Descomente a linha abaixo:
-        // await _context.SaveChangesAsync();
+        // TODO (Candidato): persistir as alteracoes no banco.
 
         return product;
     }
