@@ -1,0 +1,17 @@
+# Auto detect text files and perform LF normalization
+* text=auto eol=lf
+
+# C# source files
+*.cs     diff=csharp text eol=lf
+
+# XML project files
+*.csproj text eol=crlf
+*.sln    text eol=crlf
+*.props  text eol=crlf
+*.targets text eol=crlf
+
+# Config files
+*.json   text eol=lf
+*.md     text eol=lf
+*.yml    text eol=lf
+*.yaml   text eol=lf
